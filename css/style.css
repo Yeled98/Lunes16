@@ -18,3 +18,50 @@ img{
   margin-left: auto;
   margin-right: auto;
 }
+.transformación{
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  /*transform: translate(500px, 400px);*/
+  /*transform: rotate(45deg);*/
+  /*transform: scale(3);*/
+  /*transform: skew(20deg,10deg);*/
+  /*transform: rotate(3,2) rotate(20deg) translate(100px);*/
+  transform: rotateX(140deg);
+}
+.transición{
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  transition: background 2s;
+  transition: delay 3s, height 3s, transform 3s;
+
+}
+.transición:hover{
+  background-color: gray;
+  height: 200px;
+  transform: rotate(45deg);
+}
+.animación{
+  height: 100px;
+  width: 100px;
+  background-color: green;
+  animation-name: animación;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+/*@keyframes animación {
+  from{
+    background-color: blue;
+  }
+  to{
+    background-color: purple;
+  }
+
+}*/
+@keyframes animación {
+  0% {background-color: blue;}
+  25% {background-color: green; height: 200px;}
+  50% {background-color: yellow;}
+  100% {background-color: orange;}
+}
